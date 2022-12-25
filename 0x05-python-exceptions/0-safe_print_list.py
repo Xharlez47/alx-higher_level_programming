@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
     listTotal = 0
-    for index in range(x):
+    for index in range(x, my_list):
         try:
             print("{}".format(mylist[index], end="")
             listTotal += 1
