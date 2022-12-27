@@ -14,10 +14,6 @@ class Square:
         Returns: None
         """
         """to ensure size is an integer"""
-        if type(size) is not int:
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
         self.__size = size
 
     def area(self):
@@ -42,12 +38,12 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
     def my_print(self):
         """"print the square with # to stdout"""
         if self.__size > 0:
-            for i in range(0, self.__size)
-                for j in range(self.__size)
-                    print("#", end="")
-                print()
+            for i in range(0, self.__size):
+                [print("#", end="") for j in range(self.__size)]
+                print("")
         elif self.__size == 0:
             print("")
