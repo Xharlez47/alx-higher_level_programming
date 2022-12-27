@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Square module that defines a square by attributes and methods in (based on 5-square.py)"""
 
+
 class Square:
     """A class square with size atrribute
     Attributes:
@@ -53,7 +54,7 @@ class Square:
     def my_print(self):
         """Prints the square with the # character on stdout."""
         if self.__size == 0:
-            prin("")
+            print("")
         elif self.__size > 0:
             for y in range(self.__position[1]):
                 print()
