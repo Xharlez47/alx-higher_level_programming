@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+"""Defines a class called square"""
+
+
 class square:
+    """An empty class square"""
     pass
-def __init__(self, length=0):
-    self.length = length
-main()
