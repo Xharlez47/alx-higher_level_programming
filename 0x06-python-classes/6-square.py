@@ -3,10 +3,8 @@
 
 
 class Square:
-    """A class square with size atrribute
-    Attributes:
-        __size (int): size of the square
-    """
+    """A class square with atrributes"""
+
     def __init__(self, size=0, position=(0, 0)):
         """determines the position of the square using coordinates
         Args:
