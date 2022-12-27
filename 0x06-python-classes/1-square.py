@@ -4,13 +4,13 @@
 
 class Square:
     """A class square with size atrribute
-       Attributes:
+    Attributes:
          __size (int): size of the square 
     """
     def __init__(self, size):
         """initializes a Square
-        Args: size (int): size of a side of the square
-
+        Args: 
+            size (int): size of a side of the square
         Returns: None
         """
         self.__size = size
