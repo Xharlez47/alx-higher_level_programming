@@ -32,11 +32,12 @@ class Square:
         """a getter allows us to refers to the fields
         Returns: the size of the square
         """
-    return self.__size
+        return self.__size
+
     @size.setter
     def size(self, value):
         """a setter allows to input correct values like needed"""
-    if type(value) is not int:
+        if type(value) is not int:
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
