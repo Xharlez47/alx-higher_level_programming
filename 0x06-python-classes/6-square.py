@@ -1,16 +1,16 @@
 #!/usr/bin/python3
-"""Square module.
+"""Square module that defines a square by attributes and methods in (based on 5-square.py)
 """
 
 
 class Square():
-    """Defines a square."""
+    """A class square with atrributes"""
 
     def __init__(self, size=0, position=(0, 0)):
-        """Sets the necessary attributes for the Square object.
+        """determines the position of the square using coordinates
         Args:
-            size (int): the size of one edge of the square.
-            position (tuple): the coordinates of the square.
+            size (int)
+            position (tuple)
         """
         self.size = size
         self.position = position
