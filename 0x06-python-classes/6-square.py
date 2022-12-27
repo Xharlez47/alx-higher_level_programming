@@ -2,7 +2,7 @@
 """Square module that defines a square by attributes and methods in (based on 5-square.py)"""
 
 
-class Square:
+class Square():
     """A class square with atrributes"""
 
     def __init__(self, size=0, position=(0, 0)):
@@ -33,7 +33,7 @@ class Square:
 
     @property
     def position(self):
-        """ a getter of __position"""
+        """getter of __position"""
         return self.__position
 
     @position.setter
@@ -51,12 +51,12 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        """Prints the square with the # character on stdout"""
+        """Prints the square with the # on stdout"""
         if self.__size > 0:
             for y in range(self.__position[1]):
                 print()
             for x in range(self.__size):
                 print(' ' * self.__position[0], end='')
                 print('#' * self.__size)
-        elif self.__size == 0:
+        else:
             print()
