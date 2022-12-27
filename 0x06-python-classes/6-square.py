@@ -7,10 +7,10 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
         """determines the position of the square using coordinates
+
         Args:
             position (tuple): 2 positive integers
             size (int): integer
-        Returns: None
         """
         self.size = size
         self.position = position
