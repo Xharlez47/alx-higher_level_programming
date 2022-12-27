@@ -6,20 +6,18 @@ class Square:
     """A class square with atrributes"""
 
     def __init__(self, size=0, position=(0, 0)):
-        """determines the position of the square using coordinates
+        """determines the position of the square using coordinates.
 
         Args:
-            position (tuple): 2 positive integers
-            size (int): integer
+            position (tuple): 2 positive integers.
+            size (int): integer.
         """
         self.size = size
         self.position = position
 
     @property
     def size(self):
-        """a getter allows us to refers to the fields
-        Returns: the size of the square
-        """
+        """a getter allows us to refers to the fields"""
         return self.__size
 
     @size.setter
