@@ -1,23 +1,28 @@
 #!/usr/bin/python3
-"""Square module that defines a square by attributes and methods in (based on 5-square.py)"""
+"""Square module.
+This module contains a class that defines a square and its size and its
+position on the screen, checking if the given values are right, and a setter
+and getter methods to set or get them. There's also an area method that returns
+the area of the square, another one that handles the print of the square.
+"""
 
 
-class Square:
-    """A class square with atrributes"""
+class Square():
+    """Defines a square."""
 
     def __init__(self, size=0, position=(0, 0)):
-        """determines the position of the square using coordinates.
-
+        """Sets the necessary attributes for the Square object.
         Args:
-            position (tuple): 2 positive integers.
-            size (int): integer.
+            size (int): the size of one edge of the square.
+            position (tuple): the coordinates of the square.
         """
         self.size = size
         self.position = position
-
     @property
     def size(self):
-        """a getter allows us to refers to the fields"""
+        """a getter allows us to refers to the fields
+        Returns: the size of the square
+        """
         return self.__size
 
     @size.setter
