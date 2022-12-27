@@ -6,14 +6,14 @@ class Square:
     Attributes:
         __size (int): size of the square
     """
-    def __init__(self, size=0):
-        """initializes a Square
+    def __init__(self, size=0, position=(0, 0)):
+        """determines the position of the square using coordinates
         Args:
-            size (int): size of a side of the square
+            position (int)
         Returns: None
         """
-        """to ensure size is an integer"""
         self.__size = size
+        self.__position = position
 
     @property
     def size(self):
@@ -30,15 +30,6 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-
-    def __init__(self, size=0, position=(0, 0)):
-        """determines the position of the square using coordinates
-        Args:
-            position (int)
-        Returns: None
-        """
-        self.__size = size
-        self.__position = position
 
     @property
     def position(self):
@@ -62,10 +53,10 @@ class Square:
     def my_print(self):
         """Prints the square with the # character on stdout."""
         if self.__size == 0:
-            print("")
-            return
-        [print("") for i in range(0, self.__position[1])]
-        for i in range(0, self.__size):
-            [print(" ", end="") for j in range(0, self.__position[0])]
-            [print("#", end="") for k in range(0, self.__size)]
-            print("")
+            prin("")
+        elif self.__size > 0:
+            for y in range(self.__position[1]):
+                print()
+            for x in range(self.__size):
+                print(' ' * self.__position[0], end='')
+                print('#' * self.__size)
