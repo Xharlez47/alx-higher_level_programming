@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Square module that defines a square by attributes and methods in (based on 5-square.py)"""
 
-
 class Square:
     """A class square with size atrribute
     Attributes:
@@ -15,13 +14,6 @@ class Square:
         """
         """to ensure size is an integer"""
         self.__size = size
-
-    def area(self):
-        """calculates the area of the square which is size ** 2
-        Returns:
-            area of the square
-        """
-        return (self.__size) ** 2
 
     @property
     def size(self):
@@ -63,10 +55,15 @@ class Square:
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
 
+    def area(self):
+        """Returns the current square area."""
+        return self.__size ** 2
+
     def my_print(self):
         """Prints the square with the # character on stdout."""
         if self.__size == 0:
             print("")
+            return
         [print("") for i in range(0, self.__position[1])]
         for i in range(0, self.__size):
             [print(" ", end="") for j in range(0, self.__position[0])]
