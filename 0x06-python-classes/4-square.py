@@ -36,5 +36,8 @@ class Square:
     @size.setter
     def size(self, value):
         """a setter allows to input correct values like needed"""
-        if value.isdigit():
-            self.__size = value
+    if type(value) is not int:
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        self.__value = value
