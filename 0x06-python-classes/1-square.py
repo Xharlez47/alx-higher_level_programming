@@ -5,5 +5,4 @@
 class Square:
     """A class square with size atrribute"""
     pass
-    def __init__(self, size=0):
-    self.size = size
+    __size = 0
