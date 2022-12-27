@@ -10,11 +10,12 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """determines the position of the square using coordinates
         Args:
-            position (int)
+            position (tuple)
+            size (int)
         Returns: None
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
