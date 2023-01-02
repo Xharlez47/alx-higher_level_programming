@@ -10,6 +10,10 @@ class Rectangle:
         _width (int): width of Rectangle
         _height (int): height of Rectangle
     """
+
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """initializes a Rectangle
         Args:
