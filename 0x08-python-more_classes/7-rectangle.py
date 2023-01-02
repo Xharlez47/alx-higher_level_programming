@@ -1,17 +1,26 @@
-!/usr/bin/python3
+i!/usr/bin/python3
 """
-Defines a class Rectangle
+    Defines a classs Rectangle
 """
 
 
 class Rectangle:
-    """Representation of a rectangle"""
+    """A class Rectangle with width and height attributes
+    Attributes:
+        _width (int): width of Rectangle
+        _height (int): height of Rectangle
+    """
 
     number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        """Initializes the rectangle"""
+        """initializes a Rectangle
+        Args:
+            _width (int): width of Rectangle
+            _height (int): height of Rectangle
+        Returns: None
+        """
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
@@ -23,29 +32,33 @@ class Rectangle:
 
     @property
     def width(self):
-        """getter for the private instance attribute width"""
+        """a getter allows us to refers to the fields
+        Returns: the width of the Rectangle
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """setter for the private instance attribute width"""
+        """a setter allows to input correct values like needed"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
 
     @property
     def height(self):
-        """getter for the private instance attribute height"""
+        """a getter allows us to refers to the fields
+        Returns: the height of the Rectangle
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """setter for the private instance attribute height"""
+        """a setter allows to input correct values like needed"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
 
@@ -60,11 +73,11 @@ class Rectangle:
         return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
-        """returns printable string representation of the rectangle"""
+        """print the square with # to stdout"""
         string = ""
         if self.__width != 0 and self.__height != 0:
-            string += "\n".join(str(self.print_symbol) * self.__width
-                                for j in range(self.__height))
+            string += "\n".join("#" * self.__width
+                                for i in range(self.__height))
         return string
 
     def __repr__(self):
