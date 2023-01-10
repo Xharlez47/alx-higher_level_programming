@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """
-    a class Mylist
+    a class MyList
 """
 
 
-class Mylist(list):
+class MyList(list):
     """inherits the class list"""
     def __init__(self):
         """initializes the object"""
