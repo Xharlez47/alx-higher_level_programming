@@ -18,12 +18,3 @@ else:
     obj = []
 obj.extend(sys.argv[1:])
 save_to_json_file(obj, filename)
-Footer
- 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-
